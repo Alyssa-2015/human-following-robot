@@ -7,9 +7,9 @@ You should comment out all portions of your portfolio that you have not complete
 <!--- Anything between these symbols will not render on the published site -->
 ```
 
-| **Alyssa T** | **Kipp College Prep High School** | **Electrical engeneering  ** | **11th** |
+| ** Engeneer ** | ** School ** | ** Desired Path  ** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| FirstName LastInitialOnly | School Name | Electrical Engineering | Incoming Senior
+| Alyssa T | Kipp College Prep High School | Electrical Engineering | Incoming junior
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
@@ -78,7 +78,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+|  3-in-1 ultimate kit |  entire base of car + wiring | $69.99 | <a href="https://www.sunfounder.com/products/sunfounder-3-in-1-iot-smart-car-learning-ultimate-starter-kit#product-reviews"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 

@@ -7,7 +7,7 @@ You should comment out all portions of your portfolio that you have not complete
 <!--- Anything between these symbols will not render on the published site -->
 ```
 
-| ** Engeneer ** | ** School ** | ** Desired Path  ** | **Grade** |
+| **Engeneer** | **School** | **Desired Path** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Alyssa T | Kipp College Prep High School | Electrical Engineering | Incoming junior
 

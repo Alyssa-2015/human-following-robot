@@ -32,7 +32,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/t9IjdnJJNp8?si=hCaNVnorZQxnBWdJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For my second Milestone ive connected the L9110 , Arduino UNO obstacle, avoidance modules , and ultrasonic module to each other. I had a hard time figuring out where each wire should go on the bread board since this is my first engineering project. When I mistakenly placed wires and imported code my robot wouldnt work at all. I restarted a few times but eventually got my robot to move and follow my hand.
+For my second Milestone ive connected the L9110 , Arduino UNO obstacle, avoidance modules , and ultrasonic module to each other. I had a hard time figuring out where each wire should go on the bread board since this is my first engineering project. When I mistakenly placed wires and imported code my robot wouldnt work at all. I restarted a few times but eventually got my robot to move and follow my hand. I also found out that one 9V battery wasnt enough and that id need to get a second one to power my robot without a wire.
 # First Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DxZx1jrZPNk?si=xxixbLDLeqH3rpiW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -43,7 +43,6 @@ for my first Milestone I finished the base of my robot car. On the front ive pla
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```const int A_1B = 5;
 const int A_1A = 6;

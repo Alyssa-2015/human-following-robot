@@ -1,5 +1,5 @@
-# Human following robot
-battery powered human following robot
+# hand following robot
+In this project ill be building a hand following robot that uses sensors to detect movement. ill be using 9V batteries as energy and avoidance modules with an ultrasonic moduel as the sensors. Later this project will be modofied to be controlled by a remote allowing it to turn on and off and do other functions like drive without its sensors.
 
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
@@ -45,7 +45,7 @@ For your second milestone, explain what you've worked on since your previous mil
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src=" https://youtu.be/DxZx1jrZPNk?si=mRkIxYiZ9c7rPjZl" title="YouTube video of first Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=DxZx1jrZPNk"YouTube video of first Milestone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For your first milestone, describe what your project is and how you plan to build it. You can include:
 - An explanation about the different components of your project and how they will all integrate together
@@ -59,17 +59,99 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
-```c++
+```const int A_1B = 5;
+const int A_1A = 6;
+const int B_1B = 9;
+const int B_1A = 10;
+
+const int rightIR=7;
+const int leftIR=8;
+
+const int trigPin = 3;
+const int echoPin = 4;
+
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+  
+
+  //motor
+  pinMode(A_1B, OUTPUT);
+  pinMode(A_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
+
+  //IR obstacle
+  pinMode(leftIR,INPUT);
+  pinMode(rightIR,INPUT);
+  
+  //ultrasonic
+  pinMode(echoPin, INPUT);
+  pinMode(trigPin, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
+  float distance = readSensorData();
+
+  int left = digitalRead(leftIR);  // 0: Obstructed   1: Empty
+  int right = digitalRead(rightIR);
+  int speed = 150;
+
+  if (distance>5 && distance<10){
+    moveForward(speed);
+  }else if(!left&&right){
+    turnLeft(speed);
+  }else if(left&&!right){
+    turnRight(speed);
+  }else{
+    stopMove();
+  }
 }
+
+float readSensorData() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  float distance = pulseIn(echoPin, HIGH) / 58.00; //Equivalent to (340m/s*1us)/2
+  return distance;
+}
+
+void moveForward(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
+}
+
+void moveBackward(int speed) {
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
+}
+
+void turnRight(int speed) {
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
+}
+
+void turnLeft(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
+}
+
+void stopMove() {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
+}
+
 ```
 
 # Bill of Materials
@@ -77,14 +159,14 @@ Here's where you'll list the parts in your project. To add more rows, just copy 
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
 | **Part** | **Note** | **Price** | **Link** |
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|:--:|:--:|:--:|:--:|:--:||:--:|:--:|:--:|:--:|:--:|
 |  sunfounder R3 Board|  how to connect wiring to code | $20-60 | <a href="[Obstacle Avoidance Module¶](https://www.sunfounder.com/collections/official-arduino-boards)
 "> Link </a> |
 | L9110 Motor Driver Module | $5.99 | <a href[="https://www.amazon.com/Ferwooh-Stepper-Controller-2-5-12V-H-Bridge/dp/B0D17PJ2MS/ref=asc_df_B0D17PJ2MS?tag=bingshoppinga-20&linkCode=df0&hvadid=80676876080030&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=98109&hvtargid=pla-4584276356443276&psc=1&hvocijid=999858013441725223-B0D17PJ2MS-&hvexpln=0"> Link </a> |
 | TT Motor | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 |  Ultrasonic Module | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Obstacle Avoidance Module | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| TT Motor | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
 - [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)

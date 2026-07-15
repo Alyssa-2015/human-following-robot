@@ -1,12 +1,6 @@
 # hand following robot
 In this project ill be building a hand following robot that uses sensors to detect movement. ill be using 9V batteries as energy and avoidance modules with an ultrasonic moduel as the sensors. Later this project will be modofied to be controlled by a remote allowing it to turn on and off and do other functions like drive without its sensors.
 
-
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
-
 | **Engeneer** | **School** | **Desired Path** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Alyssa T | Kipp College Prep High School | Electrical Engineering | Incoming junior
@@ -139,7 +133,127 @@ void stopMove() {
 }
 
 ```
+# Code(modification) 
 
+```c++
+#include <IRremote.h>
+
+const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
+
+const int A_1B = 5;
+const int A_1A = 6;
+const int B_1B = 9;
+const int B_1A = 10;
+
+const int echoPin = 4;
+const int trigPin = 3;
+
+const int rightIR = 7;
+const int leftIR = 8;
+
+const int lineTrackPin = 2;
+
+int speed = 150;
+String flag = "NONE";
+
+void setup() {
+  Serial.begin(9600);
+
+  //motor
+  pinMode(A_1B, OUTPUT);
+  pinMode(A_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
+
+  //ultrasonic
+  pinMode(echoPin, INPUT);
+  pinMode(trigPin, OUTPUT);
+
+  //IR obstacle
+  pinMode(leftIR, INPUT);
+  pinMode(rightIR, INPUT);
+
+  //Line Track Module
+  pinMode(lineTrackPin, INPUT);
+
+  //IR remote
+  IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
+  Serial.println("REMOTE CONTROL START");
+
+}
+
+void loop() {
+
+  if (IrReceiver.decode()) {
+    //    Serial.println(results.value,HEX);
+    String key = decodeKeyValue(IrReceiver.decodedIRData.command);
+    if (key != "ERROR") {
+      Serial.println(key);
+
+      if (key == "+") {
+        speed += 50;
+        Serial.println(speed);
+      } else if (key == "-") {
+        speed -= 50;
+        Serial.println(speed);
+      } else if (key == "2") {
+        moveForward(speed);
+        delay(1000);
+      } else if (key == "1") {
+        moveLeft(speed);
+      } else if (key == "3") {
+        moveRight(speed);
+      } else if (key == "4") {
+        turnLeft(speed);
+      } else if (key == "6") {
+        turnRight(speed);
+      } else if (key == "7") {
+        backLeft(speed);
+      } else if (key == "9") {
+        backRight(speed);
+      } else if (key == "8") {
+        moveBackward(speed);
+        delay(1000);
+      } else if (key == "CYCLE") {
+        flag = "LINE";
+      } else if (key == "U/SD") {
+        flag = "AUTO";
+      } else if (key == "0") {
+        flag = "NONE";
+        stopMove();
+      } else if (key == "FORWARD") {
+        flag = "ULTR";
+      } else if (key == "BACKWARD") {
+        flag = "IROB";
+      } else if (key == "EQ") {
+        flag = "FOLW";
+      }
+
+      if (speed >= 255) {
+        speed = 255;
+      }
+      if (speed <= 0) {
+        speed = 0;
+      }
+      delay(500);
+      stopMove();
+    }
+
+    IrReceiver.resume();  // Enable receiving of the next value
+  }
+  if (flag == "AUTO") {
+    AutoDrive(speed);
+  } else if (flag == "LINE") {
+    lineTrack(speed);
+  } else if (flag == "ULTR") {
+    ultrasonicExample(speed);
+  } else if (flag == "IROB") {
+    irobstacleExample(speed);
+  } else if (flag == "FOLW") {
+    following(speed);
+  }
+}
+```
 # Bill of Materials
 These are the parts I used for my project with the price attched along with some notes
 

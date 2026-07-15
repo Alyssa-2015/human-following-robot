@@ -12,16 +12,25 @@ In this project ill be building a hand following robot that uses sensors to dete
 # Final Milestone
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t7KjNT5f08o?si=0Ks-kVNBe63abUAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+For my final milestone I connected an ir remote to my car to make it remote controlled. Using a new code , different fuctions are assigned to differnt buttons. I again had issues with the wiring because it only took one wire being out of place for my entire project to fail. I also learned that when using Arduino you have to select a cord along with your board or the code will not upload and there will be an error.
+- EQ is its original fuction and makes the car follow your hand.
+- + makes it Accelerate while - does the oppisite
+- 1 makes it move front left
+- 2 makes it move forward  
+- 3 makes it move front right
+- 4 makes it move left
+- 6 makes it turn right
+- 7 makes it move backward left
+- 8 makes it move backwards
+- 9 makes it move backwards right
+- Cycle makes it line following
+- U/SD makes it slef driving
+- 0 makes it stop
+  
 
-
-
+\
 # Second Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/t9IjdnJJNp8?si=hCaNVnorZQxnBWdJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

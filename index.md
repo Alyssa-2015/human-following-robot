@@ -145,7 +145,7 @@ These are the parts I used for my project with the price attched along with some
 
 | **Part** | **price** | **link** | **note** |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|   Arduino Board| $20-60 | <a href="[Obstacle Avoidance Module¶](https://www.sunfounder.com/collections/official-arduino-boards)"> |this is how you can connect your car to code |
+|   Arduino Board| $20-60 | <a href="https://www.sunfounder.com/collections/official-arduino-boards"> |this is how you can connect your car to code |
 | L9110 Motor Driver Module | $5.99 | <a href="https://www.amazon.com/Ferwooh-Stepper-Controller-2-5-12V-H-Bridge/dp/B0D17PJ2MS/ref=asc_df_B0D17PJ2MS?tag=bingshoppinga-20&linkCode=df0&hvadid=80676876080030&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=98109&hvtargid=pla-4584276356443276&psc=1&hvocijid=999858013441725223-B0D17PJ2MS-&hvexpln=0"> Link </a> |This connects the motors to the arduino and bread board|
 | TT Motor | $9.69 | <a href="https://www.amazon.com/Motor-Leads-Gearbox-Shaft-200RPM/dp/B0D8H89XDY/ref=asc_df_B0D8H89XDY?tag=bingshoppinga-20&linkCode=df0&hvadid=80814314504878&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=98109&hvtargid=pla-4584413796081357&psc=1&hvocijid=1991183372713299680-B0D8H89XDY-&hvexpln=0"> Link </a> |The motors are what make the wheels of the car spin|
 |  Ultrasonic Module | $14.99 | <a href="https://www.sunfounder.com/products/5pcs-hc-sr04-ultrasonic-module-distance-sensor"> Link </a> |This is how the robot will sense your hand

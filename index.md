@@ -1,13 +1,13 @@
-# hand following robot
+# Hand Following Robot
 In this project ill be building a hand following robot that uses sensors to detect movement. ill be using 9V batteries as energy and avoidance modules with an ultrasonic moduel as the sensors. Later this project will be modofied to be controlled by a remote allowing it to turn on and off and do other functions like drive without its sensors.
 
 | **Engeneer** | **School** | **Desired Path** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Alyssa T | Kipp College Prep High School | Electrical Engineering | Incoming junior
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
-![Headstone Image](logo.svg)
+
+![Headstone Image](IMG_0011.jpeg)
   
 # Final Milestone
 

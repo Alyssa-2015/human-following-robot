@@ -29,7 +29,7 @@ For my final milestone I connected an ir remote to my car to make it remote cont
 - U/SD makes it slef driving
 - 0 makes it stop
   
-
+This isnt the last of this robot as I might add voice control and a camera to it. Ive also gotton more 9V battery converters so in the futrue it wont need to be connected to the USB cord 😤😤😤
 
 # Second Milestone
 

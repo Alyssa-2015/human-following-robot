@@ -43,8 +43,7 @@ For my second Milestone ive connected the L9110 , Arduino UNO obstacle, avoidanc
 for my first Milestone I finished the base of my robot car. On the front ive placed my bread board , Arduino UNO , obstacle avoidance module and L9110 module. On the back of my car ive placed 2 motors for the side wheels , 1 universal wheel , and a 9V battery with a conveter attached to connect to my Arduino board. From here I can start focusing on wiring for specific things and for this project im wiring to get the car to move by sensing motion.
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
-
+Here's what you can use to help make a model. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits).
 # Code
 
 ```c++
@@ -275,7 +274,7 @@ These are the parts I used for my project with the price attched along with some
 | Obstacle Avoidance Module | $8.99 | <a href="https://www.sunfounder.com/products/obstacle-avoidance-sensor"> Link </a>|This will be used to detect your hand and move accordingly 
 
 # Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
+Heres a video I used to understand arduino for the first time.
 - [Example](https://www.youtube.com/watch?v=r8QwDoO715o)
 
 

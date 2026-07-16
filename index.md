@@ -43,7 +43,7 @@ For my second Milestone ive connected the L9110 , Arduino UNO obstacle, avoidanc
 for my first Milestone I finished the base of my robot car. On the front ive placed my bread board , Arduino UNO , obstacle avoidance module and L9110 module. On the back of my car ive placed 2 motors for the side wheels , 1 universal wheel , and a 9V battery with a conveter attached to connect to my Arduino board. From here I can start focusing on wiring for specific things and for this project im wiring to get the car to move by sensing motion.
 
 # Schematics 
-Here's what you can use to help make a model. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits).
+Here's what you can use to help make a model although I didnt use a model. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits).
 # Code
 
 ```c++
@@ -141,7 +141,7 @@ void stopMove() {
 }
 
 ```
-# Code(modification) 
+# Code(For modification) 
 
 ```c++
 #include <IRremote.h>
@@ -273,8 +273,8 @@ These are the parts I used for my project with the price attched along with some
 |  Ultrasonic Module | $14.99 | <a href="https://www.sunfounder.com/products/5pcs-hc-sr04-ultrasonic-module-distance-sensor"> Link </a> |This is how the robot will sense your hand
 | Obstacle Avoidance Module | $8.99 | <a href="https://www.sunfounder.com/products/obstacle-avoidance-sensor"> Link </a>|This will be used to detect your hand and move accordingly 
 
-# Other Resources/Examples
+# Resources/Examples
 Heres a video I used to understand arduino for the first time.
-- [Example](https://www.youtube.com/watch?v=r8QwDoO715o)
+- [How To Set up & Connect Arduino Uno R3 Board to Laptop/PC](https://www.youtube.com/watch?v=r8QwDoO715o)
 
 
